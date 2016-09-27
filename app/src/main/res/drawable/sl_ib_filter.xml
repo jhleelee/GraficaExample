@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item  android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid
+
+                android:color="@color/material_amber700a" />
+            <padding
+                android:left="16dp"
+                android:top="16dp"
+                android:right="16dp"
+                android:bottom="16dp" />
+            <!--<objectAnimator-->
+            <!--android:duration="@android:integer/config_shortAnimTime"-->
+            <!--android:propertyName="translationZ"-->
+            <!--android:valueTo="8dip"-->
+            <!--android:valueType="floatType" />-->
+
+        </shape>
+
+    </item>
+    <!-- pressed -->
+
+    <item android:state_focused="true">
+        <shape android:shape="oval">
+            <solid
+                android:color="@color/material_amber400a" />
+            <padding
+                android:left="16dp"
+                android:top="16dp"
+                android:right="16dp"
+                android:bottom="16dp" />
+        </shape>
+
+    </item>
+
+
+    <item>
+        <shape android:shape="oval">
+            <solid
+                android:color="@color/material_amber400a" />
+            <padding
+                android:left="16dp"
+                android:top="16dp"
+                android:right="16dp"
+                android:bottom="16dp" />
+            <!--<objectAnimator-->
+            <!--android:duration="@android:integer/config_shortAnimTime"-->
+            <!--android:propertyName="translationZ"-->
+            <!--android:valueTo="0dp"-->
+            <!--android:valueType="floatType" />-->
+        </shape>
+
+    </item>
+
+
+</selector>

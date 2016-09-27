@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContinuousCaptureActivity">
+
+
+    <com.entertainment.jacklee.graficaexample.AspectFrameLayout
+        android:id="@+id/continuousCapture_afl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <SurfaceView
+            android:id="@+id/continuousCapture_CameraSurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+    </com.entertainment.jacklee.graficaexample.AspectFrameLayout>
+
+    <!--<com.github.rongi.rotate_layout.layout.RotateLayout-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--app:angle="90"> &lt;!&ndash; Specify rotate angle here &ndash;&gt;-->
+
+        <!--<com.entertainment.jacklee.graficaexample.Widget.ProgressView-->
+            <!--android:id="@+id/recorder_progress"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="16dip"-->
+      <!--/>-->
+    <!--</com.github.rongi.rotate_layout.layout.RotateLayout>-->
+
+
+
+    // UP LO
+
+    <LinearLayout
+        android:layout_width="96dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btFlash"
+                android:layout_width="64dip"
+                android:layout_height="64dip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <Button
+                android:id="@+id/btChangeCamera"
+                android:layout_width="64dip"
+                android:layout_height="64dip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    // DOWNSIDE LO
+
+
+    <LinearLayout
+        android:id="@+id/loRecordBtnEtc"
+        android:layout_width="96dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btFilter"
+                android:layout_width="64dip"
+                android:layout_height="64dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <Button
+                android:id="@+id/btRecord"
+                android:layout_width="64dip"
+                android:layout_height="64dip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:background="@android:color/holo_blue_light"
+        android:id="@+id/lvFilter"
+        android:layout_width="64dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/btRECORD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="RECORD" />
+
+
+
+    <Button
+        android:id="@+id/btGRAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="GRAB"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:padding="4dip"
+    android:id="@+id/lo"
+    android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:background="@color/alphadarkgrey_80"
+                android:layout_width="64dip"
+                android:layout_height="64dip" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textSize="8dip"
+                android:text="Light"
+                android:layout_width="64dip"
+                android:layout_height="24dip" />
+
+        </LinearLayout>
+
+
+
+</LinearLayout>

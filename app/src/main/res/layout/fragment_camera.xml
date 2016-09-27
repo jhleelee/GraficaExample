@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/roRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.entertainment.jacklee.graficaexample.AspectFrameLayout
+        android:id="@+id/continuousCapture_afl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <!--<com.entertainment.jacklee.graficaexample.TryFragment.CameraSurfaceView-->
+        <!--android:id="@+id/continuousCapture_CameraSurfaceView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center" />-->
+        <SurfaceView
+            android:id="@+id/continuousCapture_CameraSurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.sprylab.android.widget.TextureVideoView
+            android:id="@+id/ttv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".TryFragment.JackActivity" />
+
+
+    </com.entertainment.jacklee.graficaexample.AspectFrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.entertainment.jacklee.graficaexample.ProgressView
+            android:id="@+id/progressView"
+            style="@style/Widget.ProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="32dip"
+            android:layout_alignParentLeft="true"
+            android:alpha="0.5" />
+
+
+        // UP LO
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/ibFilter"
+                    style="@style/RecorderImageButton.Small"
+                    android:background="@drawable/sl_ib_filter"
+                    android:src="@drawable/ic_blur_on_white_48dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/ibFlash"
+                    style="@style/RecorderImageButton.Small"
+                    android:background="@drawable/sl_ib_dgrey_alpha"
+                    android:src="@drawable/ic_flash_off_white_48dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <ImageButton
+                    android:id="@+id/ibChangeCamera"
+                    style="@style/RecorderImageButton.Small"
+                    android:background="@drawable/sl_ib_dgrey_alpha"
+                    android:src="@drawable/ic_refresh_white_48dp"
+
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dip"
+
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <ImageButton
+                    android:id="@+id/ibNext"
+                    style="@style/RecorderImageButton.Small"
+                    android:background="@drawable/sl_ib_dgrey_alpha"
+                    android:src="@drawable/ic_arrow_forward_white_48dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        // DOWNSIDE LO
+
+
+        <FrameLayout
+            android:id="@+id/fr"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"></FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/loRecordBtnEtc"
+            android:layout_width="match_parent"
+            android:layout_height="112dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/ibDelete"
+                    style="@style/RecorderImageButton.Small"
+                    android:background="@drawable/sl_ib_delete"
+                    android:src="@drawable/ic_arrow_back_white_48dp" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <ImageButton
+                    android:id="@+id/ibRecord"
+                    style="@style/RecorderImageButton.Large"
+                    android:background="@drawable/sl_ib_record" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/ibPlay"
+                    style="@style/RecorderImageButton.Small"
+                    android:background="@drawable/sl_ib_play"
+                    android:src="@drawable/ic_play_arrow_white_48dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+        <org.lucasr.twowayview.TwoWayView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/lvFilter"
+            style="@style/TwoWayView"
+            android:background="@color/alphadarkgrey_50"
+            android:layout_width="match_parent"
+            android:layout_height="96dip"
+            android:drawSelectorOnTop="false"
+            android:visibility="gone"
+    />
+
+        <Button
+            android:id="@+id/btRECORD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="RECORD"
+            android:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/btGRAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="GRAB"
+            android:visibility="gone" />
+
+
+        <!--<com.entertainment.jacklee.graficaexample.Widget.ProgressView-->
+        <!--android:id="@+id/recorder_progress"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="16dip"-->
+        <!--/>-->
+        <!--</com.github.rongi.rotate_layout.layout.RotateLayout>-->
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_green_dark"
+        android:visibility="gone" />
+
+</RelativeLayout>
